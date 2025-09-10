@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - My Website</title>
   <style>
-    /* รีเซ็ต */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
@@ -13,7 +12,6 @@
       background-size: cover;
       color: #fff;
       line-height: 1.6;
-      position: relative;
     }
 
     /* Navbar */
@@ -25,9 +23,7 @@
       background: rgba(15, 23, 42, 0.85);
       flex-wrap: wrap;
     }
-    header h1 { 
-      color: #38bdf8; 
-    }
+    header h1 { color: #38bdf8; }
     nav a {
       margin: 0 15px;
       color: #fff;
@@ -41,20 +37,16 @@
       justify-content: center;
       align-items: center;
       padding: 100px 50px;
-      flex-wrap: wrap;
       text-align: center;
+      flex-wrap: wrap;
     }
-    .hero-text h2 {
-      font-size: 3rem;
-    }
+    .hero-text h2 { font-size: 3rem; }
     .hero-text h3 {
       font-size: 2rem; 
       color: #38bdf8;
       margin: 10px 0;
     }
-    .hero-text p {
-      font-size: 1.2rem;
-    }
+    .hero-text p { font-size: 1.2rem; }
     .btn {
       display: inline-block;
       margin-top: 20px;
@@ -76,29 +68,23 @@
       max-width: 900px;
     }
 
-    /* หัวข้อ h2 gradient วิ่งเต็มตัว */
+    /* Gradient h2 */
     section h2 {
       position: relative;
       margin-bottom: 20px;
       text-align: center;
       font-size: 2.2rem;
-
       background: linear-gradient(90deg, #38bdf8, #f43f5e, #fff, #34d399, #38bdf8);
       background-size: 300% 100%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-
       animation: animateGradient 5s linear infinite;
-      text-shadow: none;
     }
-
     @keyframes animateGradient {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
-    /* เส้น gradient เฉียง */
     section h2::after {
       content: "";
       position: absolute;
@@ -114,7 +100,7 @@
       animation: animateGradient 5s linear infinite;
     }
 
-    /* Profile รูปสมัยใหม่ */
+    /* Profile */
     .profile-wrapper {
       position: relative;
       display: inline-block;
@@ -139,7 +125,6 @@
       transform: scale(1.05);
       box-shadow: 0 15px 25px rgba(56,189,248,0.6), 0 0 40px rgba(52,211,153,0.5);
     }
-
     @keyframes gradientBorder {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
@@ -159,7 +144,7 @@
       background: #38bdf8;
     }
 
-    /* Contact Form */
+    /* Form */
     form input, form textarea {
       width: 100%;
       margin: 10px 0;
@@ -196,11 +181,6 @@
       section { padding: 30px 20px; }
       .profile-wrapper img { width: 200px; height: 200px; }
     }
-
-    .big-form {
-      font-size: 18px;
-      padding: 20px;
-    }
   </style>
 </head>
 <body>
@@ -220,7 +200,7 @@
   <section class="hero" id="home">
     <div class="hero-text">
       <h2>Hi, I'm SAHARAT TRAKULSUNTHONCHAI</h2>
-      <h3 style="font-size:2rem; color:#38bdf8; margin:10px 0;">Newby Developer</h3>
+      <h3>Newby Developer</h3>
       <p>มีความสามารถในการออกแบบกราฟิก การปั้นโมเดล 3D และเขียนโค้ดเบื้องต้น</p>
       <a href="#contact" class="btn">Contact Me</a>
     </div>
@@ -234,7 +214,11 @@
         <img src="https://i.postimg.cc/KzJD8KVv/image.png" alt="Profile">
       </div>
     </div>
-    <p style="text-align:center; max-width:700px; margin:auto;"> ชื่นชอบในการออกแบบสร้างสิ่งต่างๆที่ชอบและชอบในการสร้างเว็บไซต์ต่างๆ อย่างเช่นเว็บไซต์ ให้ข้อมูลเกม แหล่งรวมรูปภาพ ชอบในการเรียนรู้สิ่งไหม่ๆฝึกในสิ่งที่อยากทำเพราะอยากมีความรู้ความสามารถในหลายๆทางเพราะความเชื่อที่ว่ามนุษย์เรียนรู้ได้ไม่มีที่สิ้นสุด</p>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+      ชื่นชอบในการออกแบบสร้างสิ่งต่างๆที่ชอบและชอบในการสร้างเว็บไซต์ต่างๆ อย่างเช่นเว็บไซต์ 
+      ให้ข้อมูลเกม แหล่งรวมรูปภาพ ชอบในการเรียนรู้สิ่งใหม่ๆ ฝึกในสิ่งที่อยากทำเพราะอยากมีความรู้ความสามารถ 
+      ในหลายๆ ทาง เพราะความเชื่อที่ว่ามนุษย์เรียนรู้ได้ไม่มีที่สิ้นสุด
+    </p>
   </section>
 
   <!-- Journey -->
@@ -242,9 +226,8 @@
     <h2>My Journey</h2>
     <h3>Education</h3>
     <p>2018 - 2021: secondary education - Muangmai School.</p>
-    <p>2021 - 2024: Vocational Certificate -  Lopburi Technical College </p>
+    <p>2021 - 2024: Vocational Certificate - Lopburi Technical College</p>
     <h3>Experience</h3>
-    
     <img src="https://i.postimg.cc/wM57G8CY/34-1.png" 
      alt="Example" 
      style="width:800px; height:auto; border:2px solid #38bdf8;">
@@ -274,7 +257,7 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <form class="big-form">
+    <form>
       <input type="text" placeholder="Full Name" required>
       <input type="email" placeholder="Email" required>
       <input type="tel" placeholder="Mobile Number">
