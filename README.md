@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - My Website</title>
+  <title>SAHARAT's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* รีเซ็ต */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body {
-      font-family: Arial, sans-serif;
-      background: url("https://i.postimg.cc/tRLGqYHz/ae7cd05d9438e3a42f955718affa1c9b.gif") no-repeat center center fixed;
-      background-size: cover;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: #fff;
       line-height: 1.6;
-      position: relative;
     }
 
     /* Navbar */
@@ -22,74 +20,70 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 50px;
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(15,23,42,0.9);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
       flex-wrap: wrap;
     }
-    header h1 { 
-      color: #38bdf8; 
+    header h1 {
+      color: #38bdf8;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
     nav a {
       margin: 0 15px;
       color: #fff;
       text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
     }
-    nav a:hover { color: #38bdf8; }
+    nav a:hover {
+      color: #34d399;
+      transform: scale(1.05);
+    }
 
-    /* Hero */
+    /* Hero Section */
     .hero {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 100px 50px;
-      flex-wrap: wrap;
+      padding: 120px 20px;
       text-align: center;
+      background: linear-gradient(180deg, rgba(15,23,42,0.95), rgba(15,23,42,0.85));
     }
-    .hero-text h2 {
+    .hero h2 {
       font-size: 3rem;
-    }
-    .hero-text h3 {
-      font-size: 2rem; 
-      color: #38bdf8;
-      margin: 10px 0;
-    }
-    .hero-text p {
-      font-size: 1.2rem;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 25px;
-      background: #38bdf8;
-      color: #0b1120;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn:hover { background: #0ea5e9; }
-
-    /* Section */
-    section {
-      padding: 60px 50px;
-      background: rgba(15, 23, 42, 0.85);
-      margin: 20px auto;
-      border-radius: 15px;
-      max-width: 900px;
-    }
-
-    /* หัวข้อ h2 gradient วิ่งเต็มตัว */
-    section h2 {
-      position: relative;
-      margin-bottom: 20px;
-      text-align: center;
-      font-size: 2.2rem;
-
-      background: linear-gradient(90deg, #38bdf8, #f43f5e, #fff, #34d399, #38bdf8);
-      background-size: 300% 100%;
+      background: linear-gradient(90deg, #38bdf8, #f43f5e, #34d399);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-
       animation: animateGradient 5s linear infinite;
-      text-shadow: none;
+      margin-bottom: 10px;
+    }
+    .hero h3 {
+      font-size: 1.8rem;
+      color: #34d399;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 12px 30px;
+      background: #38bdf8;
+      color: #0f172a;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #0ea5e9;
+      transform: scale(1.05);
     }
 
     @keyframes animateGradient {
@@ -98,119 +92,132 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* เส้น gradient เฉียง */
-    section h2::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      width: 100%;
-      height: 8px;
-      background: linear-gradient(120deg, #38bdf8, #f43f5e, #fff, #34d399, #38bdf8);
-      transform: skewX(-20deg);
-      border-radius: 4px;
-      z-index: -1;
-      background-size: 300% 100%;
+    /* Section Styles */
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(15,23,42,0.85);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, #38bdf8, #f43f5e, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 40px;
       animation: animateGradient 5s linear infinite;
     }
 
-    /* Profile รูปสมัยใหม่ */
+    /* Profile Image */
     .profile-wrapper {
-      position: relative;
-      display: inline-block;
-      border-radius: 50%;
-      padding: 5px;
-      background: linear-gradient(90deg, #38bdf8, #f43f5e, #34d399, #38bdf8);
-      background-size: 300% 300%;
-      animation: gradientBorder 5s linear infinite;
-      box-shadow: 0 10px 20px rgba(56,189,248,0.4), 0 0 30px rgba(52,211,153,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
     }
     .profile-wrapper img {
       border-radius: 50%;
-      display: block;
-      width: 350px;
-      height: 400px;
+      width: 250px;
+      height: 250px;
       object-fit: cover;
-      transition: transform 0.3s ease;
+      border: 6px solid transparent;
+      background: linear-gradient(45deg, #38bdf8, #f43f5e, #34d399, #38bdf8);
+      background-clip: padding-box, border-box;
+      animation: gradientBorder 5s linear infinite;
     }
-    .profile-wrapper:hover {
-      transform: scale(1.05);
-      box-shadow: 0 15px 25px rgba(56,189,248,0.6), 0 0 40px rgba(52,211,153,0.5);
-    }
-
     @keyframes gradientBorder {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    /* Skills Bar */
-    .skill { margin: 15px 0; }
+    /* Skills Cards */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .skill-card {
+      flex: 1 1 45%;
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    .skill-card h3 { color: #38bdf8; margin-bottom: 10px; }
     .bar {
       width: 100%;
-      background: #1e293b;
-      border-radius: 5px;
+      height: 12px;
+      background: #0f172a;
+      border-radius: 8px;
       overflow: hidden;
     }
     .bar-fill {
-      height: 14px;
-      background: #38bdf8;
+      height: 100%;
+      background: #34d399;
     }
 
     /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
     form input, form textarea {
-      width: 100%;
-      margin: 10px 0;
       padding: 12px;
+      border-radius: 10px;
       border: none;
-      border-radius: 5px;
+      font-size: 16px;
     }
     form button {
-      padding: 12px 25px;
-      background: #38bdf8;
+      padding: 12px;
+      border-radius: 50px;
       border: none;
-      border-radius: 5px;
+      font-weight: 600;
+      background: #38bdf8;
+      color: #0f172a;
       cursor: pointer;
-      font-weight: bold;
-      margin-top: 10px;
+      transition: 0.3s;
     }
-    form button:hover { background: #0ea5e9; }
+    form button:hover {
+      background: #0ea5e9;
+      transform: scale(1.05);
+    }
 
     /* Footer */
     footer {
       text-align: center;
       padding: 20px;
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(15,23,42,0.9);
+      margin-top: 50px;
+      border-radius: 15px 15px 0 0;
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
-      header { flex-direction: column; text-align: center; padding: 15px; }
-      nav { margin-top: 10px; }
-      nav a { display: block; margin: 8px 0; }
-      .hero-text h2 { font-size: 2rem; }
-      .hero-text h3 { font-size: 1.4rem; }
-      .hero-text p { font-size: 1rem; }
-      section { padding: 30px 20px; }
-      .profile-wrapper img { width: 200px; height: 200px; }
-    }
-
-    .big-form {
-      font-size: 18px;
-      padding: 20px;
+    @media(max-width:768px){
+      header { flex-direction: column; text-align: center; }
+      nav a { margin: 10px 0; }
+      .skills-container { flex-direction: column; }
     }
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
   <header>
-    <h1>MyPortfolio.</h1>
+    <h1>SAHARAT</h1>
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#journey">Education</a>
+      <a href="#journey">Journey</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -218,63 +225,58 @@
 
   <!-- Hero -->
   <section class="hero" id="home">
-    <div class="hero-text">
-      <h2>Hi, I'm SAHARAT TRAKULSUNTHONCHAI</h2>
-      <h3 style="font-size:2rem; color:#38bdf8; margin:10px 0;">Newby Developer</h3>
-      <p>มีความสามารถในการออกแบบกราฟิก การปั้นโมเดล 3D และเขียนโค้ดเบื้องต้น</p>
-      <a href="#contact" class="btn">Contact Me</a>
-    </div>
+    <h2>Hi, I'm SAHARAT TRAKULSUNTHONCHAI</h2>
+    <h3>Newby Developer</h3>
+    <p>มีความสามารถในการออกแบบกราฟิก การปั้นโมเดล 3D และเขียนโค้ดเบื้องต้น พร้อมที่จะเรียนรู้และสร้างสรรค์สิ่งใหม่ๆ</p>
+    <a href="#contact" class="btn">Contact Me</a>
   </section>
 
   <!-- About -->
   <section id="about">
     <h2>About Me</h2>
-    <div style="text-align:center;">
-      <div class="profile-wrapper">
-        <img src="https://i.postimg.cc/KzJD8KVv/image.png" alt="Profile">
-      </div>
+    <div class="profile-wrapper">
+      <img src="https://i.postimg.cc/KzJD8KVv/image.png" alt="Profile">
     </div>
-    <p style="text-align:center; max-width:700px; margin:auto;"> ชื่นชอบในการออกแบบสร้างสิ่งต่างๆที่ชอบและชอบในการสร้างเว็บไซต์ต่างๆ อย่างเช่นเว็บไซต์ ให้ข้อมูลเกม แหล่งรวมรูปภาพ ชอบในการเรียนรู้สิ่งไหม่ๆฝึกในสิ่งที่อยากทำเพราะอยากมีความรู้ความสามารถในหลายๆทางเพราะความเชื่อที่ว่ามนุษย์เรียนรู้ได้ไม่มีที่สิ้นสุด</p>
+    <p style="text-align:center; max-width:700px; margin:auto;">ชื่นชอบในการออกแบบสร้างสิ่งต่างๆที่ชอบและชอบในการสร้างเว็บไซต์ต่างๆ เช่น เว็บไซต์ให้ข้อมูลเกม แหล่งรวมรูปภาพ และชอบในการเรียนรู้สิ่งใหม่ๆ ฝึกในสิ่งที่อยากทำเพื่อพัฒนาตัวเองและความสามารถในหลายด้าน เพราะเชื่อว่ามนุษย์เรียนรู้ได้ไม่มีที่สิ้นสุด</p>
   </section>
 
   <!-- Journey -->
   <section id="journey">
     <h2>My Journey</h2>
     <h3>Education</h3>
-    <p>2018 - 2021: secondary education - Muangmai School.</p>
-    <p>2021 - 2024: Vocational Certificate -  Lopburi Technical College </p>
+    <p>2018 - 2021: Secondary Education - Muangmai School</p>
+    <p>2021 - 2024: Vocational Certificate - Lopburi Technical College</p>
     <h3>Experience</h3>
-    
-    <img src="https://i.postimg.cc/wM57G8CY/34-1.png" 
-     alt="Example" 
-     style="width:800px; height:auto; border:2px solid #38bdf8;">
+    <img src="https://i.postimg.cc/wM57G8CY/34-1.png" alt="Experience" style="width:100%; border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.3);">
   </section>
 
   <!-- Skills -->
   <section id="skills">
     <h2>My Skills</h2>
-    <div class="skill">
-      <p>HTML</p>
-      <div class="bar"><div class="bar-fill" style="width:90%"></div></div>
-    </div>
-    <div class="skill">
-      <p>CSS</p>
-      <div class="bar"><div class="bar-fill" style="width:80%"></div></div>
-    </div>
-    <div class="skill">
-      <p>JavaScript</p>
-      <div class="bar"><div class="bar-fill" style="width:50%"></div></div>
-    </div>
-    <div class="skill">
-      <p>Python</p>
-      <div class="bar"><div class="bar-fill" style="width:5%"></div></div>
+    <div class="skills-container">
+      <div class="skill-card">
+        <h3>HTML</h3>
+        <div class="bar"><div class="bar-fill" style="width:90%"></div></div>
+      </div>
+      <div class="skill-card">
+        <h3>CSS</h3>
+        <div class="bar"><div class="bar-fill" style="width:80%"></div></div>
+      </div>
+      <div class="skill-card">
+        <h3>JavaScript</h3>
+        <div class="bar"><div class="bar-fill" style="width:50%"></div></div>
+      </div>
+      <div class="skill-card">
+        <h3>Python</h3>
+        <div class="bar"><div class="bar-fill" style="width:5%"></div></div>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <form class="big-form">
+    <form>
       <input type="text" placeholder="Full Name" required>
       <input type="email" placeholder="Email" required>
       <input type="tel" placeholder="Mobile Number">
@@ -284,7 +286,8 @@
   </section>
 
   <footer>
-    <p>© 2025 MyPortfolio. All Rights Reserved.</p>
+    <p>© 2025 SAHARAT. All Rights Reserved.</p>
   </footer>
+
 </body>
 </html>
